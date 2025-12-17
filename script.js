@@ -243,5 +243,4 @@ scrollToTopButton.addEventListener('mouseleave', () => {
 // ==================== Initialize ==================== 
 document.addEventListener('DOMContentLoaded', () => {
     updateActiveLink();
-    console.log('Portfolio website loaded successfully!');
 });

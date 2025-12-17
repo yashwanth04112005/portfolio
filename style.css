@@ -906,6 +906,11 @@ body {
         text-align: center;
     }
 
+    .about-image {
+        display: flex;
+        justify-content: center;
+    }
+
     .about-details {
         grid-template-columns: 1fr;
         gap: 1.5rem;
