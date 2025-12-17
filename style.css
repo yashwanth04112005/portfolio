@@ -775,6 +775,41 @@ body {
 }
 
 /* ==================== Responsive Design ==================== */
+
+/* Tablet & Medium Devices */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .hero-content {
+        gap: 3rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .about-content {
+        gap: 3rem;
+    }
+
+    .skills-grid {
+        gap: 3rem;
+    }
+
+    .profile-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .profile-circle-about {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+/* Mobile & Small Tablets */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -788,23 +823,42 @@ body {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 70px;
+        top: 60px;
         left: 0;
         right: 0;
-        background: var(--secondary-color);
+        background: rgba(10, 14, 39, 0.98);
         padding: 2rem;
         gap: 1rem;
         border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar .container {
+        padding: 0.6rem 20px;
+    }
+
+    .nav-brand {
+        font-size: 1.5rem;
     }
 
     .hero {
         margin-top: 60px;
         min-height: auto;
+        padding: 40px 0;
     }
 
     .hero-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+        text-align: center;
+    }
+
+    .hero-text {
+        order: 2;
+    }
+
+    .hero-image {
+        order: 1;
     }
 
     .hero-title {
@@ -815,19 +869,65 @@ body {
         font-size: 1.2rem;
     }
 
+    .greeting {
+        font-size: 1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
     .profile-circle {
         width: 250px;
         height: 250px;
     }
 
-    .about-content,
-    .skills-grid,
+    .profile-circle-about {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about,
+    .skills,
+    .projects,
+    .achievements,
+    .certifications,
+    .contact {
+        padding: 60px 0;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .about-details {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .about-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
     .contact-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     .section-title {
         font-size: 2rem;
+        margin-bottom: 2.5rem;
     }
 
     .footer .container {
@@ -835,26 +935,60 @@ body {
         gap: 1.5rem;
     }
 
-    .about-details {
-        grid-template-columns: 1fr;
-    }
-
     .project-card {
         padding: 1.5rem;
     }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certifications-list {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+    }
 }
 
+/* Extra Small Devices */
 @media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .nav-brand {
+        font-size: 1.3rem;
+    }
+
+    .hero {
+        padding: 30px 0;
+    }
+
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero-subtitle {
         font-size: 1rem;
     }
 
+    .greeting {
+        font-size: 0.9rem;
+    }
+
+    .hero-description {
+        font-size: 0.85rem;
+    }
+
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         margin-bottom: 2rem;
     }
 
@@ -863,13 +997,14 @@ body {
         height: 200px;
     }
 
-    .hero-description {
-        font-size: 0.9rem;
+    .profile-circle-about {
+        width: 180px;
+        height: 180px;
     }
 
     .nav-menu.active {
-        padding: 1rem;
-        gap: 0.5rem;
+        padding: 1.5rem;
+        gap: 0.8rem;
     }
 
     .social-links {
@@ -877,8 +1012,139 @@ body {
     }
 
     .social-link {
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .about,
+    .skills,
+    .projects,
+    .achievements,
+    .certifications,
+    .contact {
+        padding: 50px 0;
+    }
+
+    .about-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-text p,
+    .project-card p,
+    .achievement-card p {
+        font-size: 0.9rem;
+    }
+
+    .skill-category h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-card {
+        padding: 1.25rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+
+    .project-tech span {
+        font-size: 0.75rem;
+        padding: 3px 10px;
+    }
+
+    .project-link {
+        font-size: 0.9rem;
+    }
+
+    .achievement-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+
+    .achievement-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .cert-item {
+        padding: 1.5rem;
+    }
+
+    .cert-item h4 {
         font-size: 1rem;
     }
+
+    .cert-item i {
+        font-size: 2rem;
+    }
+
+    .contact-item i {
+        font-size: 1.3rem;
+    }
+
+    .contact-item h4 {
+        font-size: 0.95rem;
+    }
+
+    .contact-item p {
+        font-size: 0.85rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 1.5rem 0;
+        font-size: 0.85rem;
+    }
+
+    .footer-social a {
+        font-size: 1.1rem;
+    }
+
+    .tool-badge {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+
+    .detail-item h4 {
+        font-size: 0.95rem;
+    }
+
+    .detail-item p {
+        font-size: 0.85rem;
+    }
 }
+
+/* Landscape Mode for Small Devices */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 30px 0;
+    }
+
+    .profile-circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-content {
+        gap: 2rem;
+    }
+}
+
