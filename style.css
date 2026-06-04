@@ -299,6 +299,8 @@ section::before {
 .contact-item p,
 .detail-item p {
     color: var(--text-2);
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .hero-description {
@@ -557,6 +559,7 @@ section::before {
 
 .detail-item {
     padding: 1.1rem 1.2rem;
+    min-width: 0;
 }
 
 .detail-item h4,
@@ -933,6 +936,21 @@ section::before {
     box-shadow: 0 16px 32px rgba(255, 95, 109, 0.25) !important;
 }
 
+.cursor-orb {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    background: radial-gradient(circle, rgba(255, 95, 109, 0.16) 0%, rgba(124, 92, 255, 0.08) 34%, transparent 68%);
+    filter: blur(18px);
+    mix-blend-mode: screen;
+    opacity: 0.75;
+}
+
 /* ==================== Animations ==================== */
 @keyframes float {
     0%,
@@ -1184,6 +1202,12 @@ section::before {
 
     .hero-content {
         gap: 1.75rem;
+    }
+}
+
+@media (pointer: coarse) {
+    .cursor-orb {
+        display: none;
     }
 }
 

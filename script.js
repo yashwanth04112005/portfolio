@@ -122,12 +122,32 @@ document.querySelectorAll('.project-card, .achievement-card, .cert-item, .skill-
 });
 
 // ==================== Mouse Cursor Effect ==================== 
-document.addEventListener('mousemove', (e) => {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Optional: Add custom cursor tracking effects here
-});
+if (!prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
+    const cursorOrb = document.createElement('div');
+    cursorOrb.className = 'cursor-orb';
+    document.body.appendChild(cursorOrb);
+
+    let cursorX = window.innerWidth / 2;
+    let cursorY = window.innerHeight / 2;
+    let orbX = cursorX;
+    let orbY = cursorY;
+
+    document.addEventListener('pointermove', (e) => {
+        cursorX = e.clientX;
+        cursorY = e.clientY;
+    });
+
+    const animateCursor = () => {
+        orbX += (cursorX - orbX) * 0.14;
+        orbY += (cursorY - orbY) * 0.14;
+        cursorOrb.style.transform = `translate3d(${orbX}px, ${orbY}px, 0) translate(-50%, -50%)`;
+        requestAnimationFrame(animateCursor);
+    };
+
+    animateCursor();
+}
 
 // ==================== Keyboard Navigation ==================== 
 document.addEventListener('keydown', (e) => {
